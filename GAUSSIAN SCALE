@@ -1,0 +1,14 @@
+import cv2
+import matplotlib.pyplot as plt
+
+# Apply Gaussian blur to the grayscale image
+# The kernel size (5, 5) determines the strength of the blur.
+# The last argument (0) is the standard deviation in the X and Y direction (sigmaX, sigmaY).
+blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
+
+# Display the blurred image
+plt.figure(figsize=(6, 6))
+plt.imshow(blurred_image, cmap='gray')
+plt.title('Gaussian Blurred Image')
+plt.axis('off')
+plt.show()
